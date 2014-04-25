@@ -9,36 +9,11 @@ stylesheet: web
 
 # Introduction { .intro}
 
-Have you ever wondered how the worldwide web works? Of course you have! Today you will learn how to make web sites so you too can contribute to building it. Websites are written using __HTML__, which stands for __HyperText Markup Language__. You will find out more about it as you build your page.
+Today we are learning how to make web sites. Websites are written using __HTML__, which stands for __HyperText Mark-up Language__.
 
-# Step 1: What are web pages? { .activity}
+# Let's Recap { .activity}
 
-## Activity Checklist { .check}
-
-1. Open a __text editor__. 
-2. Create a new document. 
-3. Write something! For example:
-`Hello! My name is …`
-4. Save the file. Call it `hello.txt`.
-5. Now find the file and open it again. It opens up in a text editor, which is not that much fun.
-6. Change the extension (the bit after the dot) to `.html`, so now the file is called `hello.html`.
-7. Open the file again.
-
-What program was used to open the file this time? The web browser is a special program that knows how to interpret text files written using __HTML language__. We haven't added any __HTML__ yet, we simply put in some text, but the browser doesn't care! As long as you give it an `.html` file, it will do its best to show you the file as best as it can understand it. 
-
-This is very useful: even when a website contains errors, the browser will try to figure out how to show it to you anyway. 
-
-__How can we view these files?__
-
-When you type in the address in your browser, your request gets passed along to a computer which is always turned on and configured to allow you to see the pages that live inside it. This computer is called a server. When it receives a request from your computer, it looks for all the necessary files: the `.html` file and sends you that with anything else that the page needs, like images and videos.
-
-###Can I have this page please? 
-![screenshot](diagram_screenshot.png)
-Here you go.
-
-# Step 2: What is HTML? { .activity}
-
-HTML is a __markup__ language - it means that it is used to describe what things are. 
+HTML is a __mark-up__ language - it means that it is used to describe what things are. 
 
 Even though the browser will try to display things as best as it can, it helps it to know what these things are.
 
@@ -55,49 +30,67 @@ and a matching closing one with a forward slash:
 `</p>`
 The browser knows that anything in between the two tags is a paragraph of text.
 
-Tags can have attributes, which are bits of useful information about the element.
-Let's have a look at the link tag:
-`<a href="http://codeclub.org.uk">Visit CodeClub website</a>`
-`<a>` stands for __anchor__, which is what links used to be called.
+We saw the `<h1>` and `<img>` tags being used on the board.
 
-It also has the opening tag:
+`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` - headings, from biggest to smallest
+`<img>` - a special element, which unlike others doesn't have a closing tag. We use it for putting the images in.
+
+As we saw on the board, the `<img>` tag had an attribute, which was the web address of the school's logo. Other tags have attributes too. A popular one is the __anchor__ tag.
+
+Let's have a look at the __anchor__ tag:
+`<a href="http://codeclub.org.uk">Visit CodeClub website</a>`
+`<a>` stands for __anchor__, which is what links used to be called, because once upon a time they would only be used to jump you around one big page - to different __anchor points__ on the page.
+
+The __anchor__ tag has the opening tag:
 `<a>`
 and the closing tag:
 `</a>`
-but we added an attribute to the opening one:
+but we added an attribute to the opening tag:
 `<a href="http://codeclub.org.uk">`
-`href` is the attribute, and `http://codeclub.org.uk` is its value.
-`href` stands for _hypertext reference_. A text that linked to other texts was once named _hypertext_, because it could have images, and sounds, and could link to other texts. That made it a little bit different to plain text.
-`href` tells the browser where the link should take you to, and the text in between the tags will be visible as a link.
+Note that we never add attributes to the closing tag.
+`href` is the attribute __name__, and `http://codeclub.org.uk` is its __value__.
+So attributes always look like `name="value"`.
+
+`href` stands for _hyper-text reference_. A text that linked to other texts was once named _hypertext_, because it could have images, and sounds, and could link to other texts. That made it a little bit different to plain text.
+`href` tells the browser where the link should take you, and the text inbetween the tags is the text that will be visible as a link.
+
+There are lots and lots of tags. Here are some more common ones:
+`<ol>` - ordered list, when you want to have a list that goes in order by number
+`<ul>` - unordered list, when you just want to list some things with bullet points and the order doesn't matter
+`<li>` - list item, this tag goes inside a list tag and contains the text of the item you want to add
+`<hr>` - horizontal rule (puts a line across the web page like you might do with a pencil in your workbooks)
+`<div>` - a special box that you can't see, but the web browser uses keeping things grouped together
+
+There are some tags that we will _always_ use in HTML documents. They are:
+`<html>` - tells the browser where we put our code
+`<head>` - inside `<head>` we put more tags, which may be useful to the browser. No text inside the `<head>` will appear on the page. In this example we put a `<title>` there, which then shows up at the top of the browser window.
+`<body>` - this is where we put the things we want to appear on the page, in its body. Notice we've got `head` and `body`. Sometimes people add a footer to their web pages. This can go in a `<footer>` tag, but because you want it to appear on the page it must still go inside the `<body>` tag.
 
 ## Activity Checklist { .check}
 
-1. Open the `page.html` file.
-2. Ask the volunteer whether you can use X-Ray Goggles or developer tools to look at the code (developer is someone who makes things with code).
+1. Open up a web browser and go to `http://goo.gl/fHTu4U`.
+2. Have a look around the page. On the left you can see the HTML that makes up the web page on the right. Can you recognise all the tags listed above?
+3. Are there any new tags on this page? See if you can figure out what the different tag names stand for.
 
+| Tag           | What does it do?                                      |
+| ------------- | ----------------------------------------------------- |
+| _____________ |  ____________________________________________________ | # doctype
+| _____________ |  ____________________________________________________ | # strong
+| _____________ |  ____________________________________________________ | # em
+| _____________ |  ____________________________________________________ | # u
+| _____________ |  ____________________________________________________ | # code
+| _____________ |  ____________________________________________________ | # <!-- -->
+| _____________ |  ____________________________________________________ | # spare in case they re-identify one
 
-#### If you can use X-Ray Goggles:
-3. Click on the X-Ray Goggles bookmarklet. 
-4. Move your mouse around the page. You can see the parts of the page light up, and see what tags they are made of. You can click on each box to see the snippet of code the box is made of.
+4. What about attributes? Which other tags can you spot using attributes and what are they? 
 
-#### If you are using developer tools:
-3. Move around the page. Right click anything interesting, and then click `Inspect element`. A panel will open up which will show you the page's code at the same time as the page.
-4. Move your mouse over different pieces of code. The corresponding things on the page will be highlighted, so you can see which bit does what.
-5. Try to inspect all parts of the page. Can you figure out what the different tag names stand for?
-
-We already know `<p>` and `<a>`.
-`<ol>` - ordered list 
-`<ul>` - unordered list
-`<li>` - list item
-`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` - headings
-`<hr>` - horizontal rule
-`<div>` - a box for grouping things
-`<img>` - a special element, which unlike others doesn't have a closing tag. We use it for putting the images in.
-
-There are also some tags that we will always use in HTML documents, and they are:
-`<html>` - tells the browser where we put out code
-`<head>` - inside `<head>` we put things which may be useful to the browser, but which don't appear as text on the page. In this example we put a `<title>` there, which then shows up at the top of the browser window.
-`<body>` - that's where we put the things we want to appear on the page
+| Tag & Attribute   | What does it do?                                      |
+| ----------------- | ----------------------------------------------------- |
+| _________________ | _____________________________________________________ | # <p class>
+| _________________ | _____________________________________________________ | # <div id>
+| _________________ | _____________________________________________________ | # <img width>
+| _________________ | _____________________________________________________ | # <img height>
+| _________________ | _____________________________________________________ | # <img alt>
 
 ## Activity Checklist { .check}
 
@@ -130,3 +123,39 @@ Now copy it and move it somewhere else. Save the page and refresh it in the brow
 * Add your own headings where you think they might be useful. What happens if you change the heading numbers, for example from `<h3>` to `<h4>`?
 * What would you have to do to link to a different page?
 * If you are using developer tools, once you bring up the panel with the code try double-clicking on the code that looks interesting. See if you can change it. Now you get a live preview without having to move between the browser and the code editor. Cool, huh? Now refresh the page. What happened? When you edit code like this it doesn't get saved, so you can preview what would happen if you did, but don't mess up your file, so you can experiment lots and always go back.
+
+# Homework: HTML at home? { .activity}
+
+## Activity Checklist { .check}
+
+1. Open a __text editor__. 
+2. Create a new document. 
+3. Write something! For example:
+`Hello! My name is …`
+4. Save the file. Call it `hello.txt`.
+5. Now find the file and open it again. It opens up in a text editor, which is not that much fun.
+6. Change the extension (the bit after the dot) to `.html`, so now the file is called `hello.html`.
+7. Open the file again.
+
+What program was used to open the file this time? The web browser is a special program that knows how to interpret text files written using __HTML language__. We haven't added any __HTML__ yet, we simply put in some text, but the browser doesn't care! As long as you give it an `.html` file, it will do its best to show you the file as best as it can understand it. 
+
+This is very useful: even when a website contains errors, the browser will try to figure out how to show it to you anyway. 
+
+__How can we view these files?__
+
+When you type in the address in your browser, your request gets passed along to a computer which is always turned on and configured to allow you to see the pages that live inside it. This computer is called a server. When it receives a request from your computer, it looks for all the necessary files: the `.html` file and sends you that with anything else that the page needs, like images and videos.
+
+Try and make a web page using HTML like you learned in class. If you use a recent Internet Exlporer, or Google Chrome, you can bring up a developer box
+
+#### If you can use X-Ray Goggles:
+3. Click on the X-Ray Goggles bookmarklet. 
+4. Move your mouse around the page. You can see the parts of the page light up, and see what tags they are made of. You can click on each box to see the snippet of code the box is made of.
+
+#### If you are using developer tools:
+3. Move around the page. Right click anything interesting, and then click `Inspect element`. A panel will open up which will show you the page's code at the same time as the page.
+4. Move your mouse over different pieces of code. The corresponding things on the page will be highlighted, so you can see which bit does what.
+5. Try to inspect all parts of the page. Can you figure out what the different tag names stand for?
+
+###Can I have this page please? 
+![screenshot](diagram_screenshot.png)
+Here you go.
