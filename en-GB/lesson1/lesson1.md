@@ -9,9 +9,12 @@ stylesheet: web
 
 # Introduction { .intro}
 
-Today we are learning how to make web sites. Websites are written using __HTML__, which stands for __HyperText Mark-up Language__.
+Today we are learning how to make web sites. 
 
 # Let's Recap { .activity}
+
+## HTML
+Websites are written using __HTML__, which stands for __HyperText Mark-up Language__.
 
 HTML is a __mark-up__ language - it means that it is used to describe what things are. 
 
@@ -19,54 +22,56 @@ Even though the browser will try to display things as best as it can, it helps i
 
 To tell the browser that, we use `tags`. 
 
+## Tags
+
 Tags look like this:
-`<p>This is some text.</p>`
+- `<p>This is some text.</p>`
+- `<p>` is short for __paragraph__.
 
-`<p>` is short for __paragraph__.
+There is an opening tag, `<p>` and a matching closing one with a forward slash (`/`): `</p>`
 
-There is an opening tag which is this:
-`<p>`
-and a matching closing one with a forward slash:
-`</p>`
-The browser knows that anything in between the two tags is a paragraph of text.
+The browser knows that anything inbetween the two tags is a paragraph of text.
 
-We saw the `<h1>` and `<img>` tags being used on the board.
+We saw the `<h1>` and `<img>` tags being used on the board:
 
-`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` - headings, from biggest to smallest
-`<img>` - a special element, which unlike others doesn't have a closing tag. We use it for putting the images in.
+- `<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, `<h6>` - headings, from biggest to smallest
+- `<img>` - a special element, which unlike others doesn't have a closing tag. We use it for putting the images in.
+
+## Attributes
 
 As we saw on the board, the `<img>` tag had an attribute, which was the web address of the school's logo. Other tags have attributes too. A popular one is the __anchor__ tag.
 
 Let's have a look at the __anchor__ tag:
-`<a href="http://codeclub.org.uk">Visit CodeClub website</a>`
+
+> `<a href="http://codeclub.org.uk">Visit CodeClub website</a>`
+
 `<a>` stands for __anchor__, which is what links used to be called, because once upon a time they would only be used to jump you around one big page - to different __anchor points__ on the page.
 
-The __anchor__ tag has the opening tag:
-`<a>`
-and the closing tag:
-`</a>`
-but we added an attribute to the opening tag:
-`<a href="http://codeclub.org.uk">`
-Note that we never add attributes to the closing tag.
-`href` is the attribute __name__, and `http://codeclub.org.uk` is its __value__.
+The __anchor__ tag has the opening tag `<a>` and the closing tag `</a>`, but we added an attribute to the opening tag:
+
+> `<a href="http://codeclub.org.uk">`
+
+Note that we never add attributes to the closing tag. `href` is the attribute __name__, and `http://codeclub.org.uk` is its __value__.
+
 So attributes always look like `name="value"`.
 
-`href` stands for _hyper-text reference_. A text that linked to other texts was once named _hypertext_, because it could have images, and sounds, and could link to other texts. That made it a little bit different to plain text.
+`href` stands for _hyper-text reference_. A text that linked to other texts was once named _hyper-text_, because it could have images, and sounds, and could link to other texts. That made it a little bit different to plain text.
 `href` tells the browser where the link should take you, and the text inbetween the tags is the text that will be visible as a link.
 
 There are lots and lots of tags. Here are some more common ones:
-`<ol>` - ordered list, when you want to have a list that goes in order by number
-`<ul>` - unordered list, when you just want to list some things with bullet points and the order doesn't matter
-`<li>` - list item, this tag goes inside a list tag and contains the text of the item you want to add
-`<hr>` - horizontal rule (puts a line across the web page like you might do with a pencil in your workbooks)
-`<div>` - a special box that you can't see, but the web browser uses keeping things grouped together
+
+- `<ol>` - ordered list, when you want to have a list that goes in order by number
+- `<ul>` - unordered list, when you just want to list some things with bullet points and the order doesn't matter
+- `<li>` - list item, this tag goes inside a list tag and contains the text of the item you want to add
+- `<hr>` - horizontal rule (puts a line across the web page like you might do with a pencil in your workbooks)
+- `<div>` - a special box that you can't see, but the web browser uses keeping things grouped together
 
 There are some tags that we will _always_ use in HTML documents. They are:
-`<html>` - tells the browser where we put our code
-`<head>` - inside `<head>` we put more tags, which may be useful to the browser. No text inside the `<head>` will appear on the page. In this example we put a `<title>` there, which then shows up at the top of the browser window.
-`<body>` - this is where we put the things we want to appear on the page, in its body. Notice we've got `head` and `body`. Sometimes people add a footer to their web pages. This can go in a `<footer>` tag, but because you want it to appear on the page it must still go inside the `<body>` tag.
+- `<html>` - tells the browser where we put our code
+- `<head>` - inside `<head>` we put more tags, which may be useful to the browser. No text inside the `<head>` will appear on the page. In this example we put a `<title>` there, which then shows up in the window bar or tab.
+- `<body>` - this is where we put the things we want to appear on the page. Notice we've got `head` and `body`. Sometimes people add a footer to their web pages. This can go in a `<footer>` tag, but because you want it to appear on the page it must still go inside the `<body>` tag.
 
-## Activity Checklist { .check}
+# Activity Checklist { .check}
 
 1. Open up a web browser and go to `http://goo.gl/fHTu4U`.
 2. Have a look around the page. On the left you can see the HTML that makes up the web page on the right. Can you recognise all the tags listed above?
