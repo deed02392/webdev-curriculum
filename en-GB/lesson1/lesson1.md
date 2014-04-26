@@ -39,23 +39,27 @@ We saw the `<h1>` and `<img>` tags being used on the board:
 
 ## Attributes
 
-As we saw on the board, the `<img>` tag had an attribute, which was the web address of the school's logo. Other tags have attributes too. A popular one is the __anchor__ tag.
+As we saw on the board, the `<img>` tag had an attribute, which was the web address of the school's logo. Other tags have attributes too. A popular tag with an attribute is the __anchor__ tag. You almost never see it without an attribute.
 
 Let's have a look at the __anchor__ tag:
-
-> `<a href="http://codeclub.org.uk">Visit CodeClub website</a>`
-
+```HTML
+<a href="http://codeclub.org.uk">Visit CodeClub website</a>
+```
 `<a>` stands for __anchor__, which is what links used to be called, because once upon a time they would only be used to jump you around one big page - to different __anchor points__ on the page.
 
 The __anchor__ tag has the opening tag `<a>` and the closing tag `</a>`, but we added an attribute to the opening tag:
+```HTML
+<a href="http://codeclub.org.uk">
+```
+This is the bit that decides where on the Internet clicking on the anchor text will take us.
 
-> `<a href="http://codeclub.org.uk">`
+We never add attributes to the closing tag.
 
-Note that we never add attributes to the closing tag. `href` is the attribute __name__, and `http://codeclub.org.uk` is its __value__.
+`href` is the attribute __name__, and `http://codeclub.org.uk` is its __value__.
 
 So attributes always look like `name="value"`.
 
-`href` stands for _hyper-text reference_. A text that linked to other texts was once named _hyper-text_, because it could have images, and sounds, and could link to other texts. That made it a little bit different to plain text.
+`href` stands for __hyper-text reference__. A text that linked to other texts was once named __hyper-text__, because it could have images, and sounds, and could link to other texts. That made it a little bit different to plain text.
 `href` tells the browser where the link should take you, and the text inbetween the tags is the text that will be visible as a link.
 
 There are lots and lots of tags. Here are some more common ones:
@@ -71,31 +75,32 @@ There are some tags that we will _always_ use in HTML documents. They are:
 - `<head>` - inside `<head>` we put more tags, which may be useful to the browser. No text inside the `<head>` will appear on the page. In this example we put a `<title>` there, which then shows up in the window bar or tab.
 - `<body>` - this is where we put the things we want to appear on the page. Notice we've got `head` and `body`. Sometimes people add a footer to their web pages. This can go in a `<footer>` tag, but because you want it to appear on the page it must still go inside the `<body>` tag.
 
-# Activity Checklist { .check}
+## Activity Checklist { .check}
 
 1. Open up a web browser and go to `http://goo.gl/fHTu4U`.
 2. Have a look around the page. On the left you can see the HTML that makes up the web page on the right. Can you recognise all the tags listed above?
 3. Are there any new tags on this page? See if you can figure out what the different tag names stand for.
 
-| Tag           | What does it do?                                      |
-| ------------- | ----------------------------------------------------- |
-| _____________ |  ____________________________________________________ | # doctype
-| _____________ |  ____________________________________________________ | # strong
-| _____________ |  ____________________________________________________ | # em
-| _____________ |  ____________________________________________________ | # u
-| _____________ |  ____________________________________________________ | # code
-| _____________ |  ____________________________________________________ | # <!-- -->
-| _____________ |  ____________________________________________________ | # spare in case they re-identify one
+
+	| Tag           | What does it do?                                      |
+	| ------------- | ----------------------------------------------------- |
+	| _____________ |  ____________________________________________________ | # doctype
+	| _____________ |  ____________________________________________________ | # strong
+	| _____________ |  ____________________________________________________ | # em
+	| _____________ |  ____________________________________________________ | # u
+	| _____________ |  ____________________________________________________ | # code
+	| _____________ |  ____________________________________________________ | # <!-- -->
+	| _____________ |  ____________________________________________________ | # spare in case they re-identify one
 
 4. What about attributes? Which other tags can you spot using attributes and what are they? 
 
-| Tag & Attribute   | What does it do?                                      |
-| ----------------- | ----------------------------------------------------- |
-| _________________ | _____________________________________________________ | # <p class>
-| _________________ | _____________________________________________________ | # <div id>
-| _________________ | _____________________________________________________ | # <img width>
-| _________________ | _____________________________________________________ | # <img height>
-| _________________ | _____________________________________________________ | # <img alt>
+	| Tag & Attribute   | What does it do?                                      |
+	| ----------------- | ----------------------------------------------------- |
+	| _________________ | _____________________________________________________ | # <p class>
+	| _________________ | _____________________________________________________ | # <div id>
+	| _________________ | _____________________________________________________ | # <img width>
+	| _________________ | _____________________________________________________ | # <img height>
+	| _________________ | _____________________________________________________ | # <img alt>
 
 ## Activity Checklist { .check}
 
