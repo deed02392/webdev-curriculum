@@ -9,9 +9,9 @@ stylesheet: web
 
 # Introduction { .intro}
 
-Today we are learning how to make web sites.
+Today we are learning what HTML is and how tags can be used to create simple web pages.
 
-# Let's Recap { .activity}
+# Classwork: Let's Recap { .activity}
 
 ## HTML
 Websites are written using __HTML__, which stands for __HyperText Mark-up Language__.
@@ -55,12 +55,12 @@ This is the bit that decides where on the Internet clicking on the anchor text w
 
 We never add attributes to the closing tag.
 
-Note that we never add attributes to the closing tag. `href` is the attribute __name__, and `http://codeclub.org.uk` is its __value__.
+`href` is the attribute __name__, and `http://codeclub.org.uk` is its __value__.
 
 So attributes always look like `name="value"`.
 
 `href` stands for __hyper-text reference__. A text that linked to other texts was once named __hyper-text__, because it could have images, and sounds, and could link to other texts. That made it a little bit different to plain text.
-`href` tells the browser where the link should take you, and the text in between the tags is the text that will be visible as a link.
+`href` tells the browser where the link should take you, and the text in between the tags is the text that will be visible as a link, often blue and underlined.
 
 There are lots and lots of tags. Here are some more common ones:
 
@@ -126,7 +126,7 @@ For example, some of your paragraphs might be introductions, so you could give t
 
 Now copy it and move it somewhere else. Watch how the output on the right changes. How does the order of the code affect the order in which things are displayed in the browser? What about the individual `<li>` tags in this ordered list?
 
-# Homework: HTML at home? { .activity}
+# Homework: HTML at home { .activity}
 
 ## Activity Checklist { .check}
 
@@ -143,26 +143,24 @@ What program was used to open the file this time? The web browser is a special p
 
 This is very useful: even when a website contains errors, the browser will try to figure out how to show it to you anyway. 
 
-## Things to try { .try}
-
-* Create your own paragraph of text.
-* Make a link that points to another part of page (hint: it is something to do with id - look out for a link that takes you to the kitten in the page we used in class).
-* Add your own headings where you think they might be useful. What happens if you change the heading numbers, for example from `<h3>` to `<h4>`?
-* What would you have to do to link to a different page?
-* If you are using developer tools, once you bring up the panel with the code try double-clicking on the code that looks interesting. See if you can change it. Now you get a live preview without having to move between the browser and the code editor. Cool, huh? Now refresh the page. What happened? When you edit code like this it doesn't get saved, so you can preview what would happen if you did, but don't mess up your file, so you can experiment lots and always go back.
-
-__How can we view these files?__
-
-When you type in the address in your browser, your request gets passed along to a computer which is always turned on and configured to allow you to see the pages that live inside it. This computer is called a server. When it receives a request from your computer, it looks for all the necessary files: the `.html` file and sends you that with anything else that the page needs, like images and videos.
-
-Try and make a web page using HTML like you learned in class. If you use a recent Internet Exlporer, or Google Chrome, you can bring up a developer box.
-
 #### Have you got developer tools?
+If you use a recent Internet Exlporer, or Google Chrome, you can bring up a developer box.
 1. Move around the page. Right click anything interesting, and then click `Inspect element`. A panel will open up which will show you any web pages code!
 2. Move your mouse over different pieces of code. The part of the page that the code represents will light up, so you can see what code does what.
 3. There will be lots of new tags to you on complex websites. Can you figure out what the different tag names stand for?
 4. What happens when you try things like changing `class=""` attributes? Don't worry about messing the page up, just refresh and everything will reset.
 
+## Things to try { .try}
 
-### How do websites work on the Internet? 
+* Create your own paragraph of text.
+* Make a link that points to another part of page (hint: it is something to do with the ID attribute - look out for the link that takes you to the kitten in the page we used in class).
+* Add your own headings where you think they might be useful. What happens if you change the heading numbers, for example from `<h3>` to `<h4>`?
+* What would you have to do to link to a different page?
+* If you are using developer tools, once you bring up the panel with the code try double-clicking on the code that looks interesting. See if you can change it. Now you get a live preview without having to move between the browser and the code editor.
+* Now refresh the page. What happened? When you edit code like this it doesn't get saved, so you can preview what would happen without messing up your file. Experiment with your changes like this before updating your `.html` file.
+
+## How do websites work on the Internet?
+ 
+When you type in the address in your browser, your request gets passed along to a computer which is always turned on and configured to allow you to see the pages that live inside it. This computer is called a server. When it receives a request from your computer, it looks for all the necessary files, then creates the `.html` file before sending it to you, with anything else that the page needs, like images and videos.
+
 ![screenshot](diagram_screenshot.png)

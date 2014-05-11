@@ -1,5 +1,5 @@
 ---
-title: Building simple webpages
+title: Your Own Website
 level: Lesson 2
 language: en-GB
 embeds: "*.png"
@@ -9,133 +9,111 @@ stylesheet: web
 
 ## Introduction { .intro}
 
-You know a few __HTML__ tags, so it's time to make your first page! Let's get started right away.
+You know a few __HTML__ tags, so it's time to make your first web page!
 
-# Step 1: Open the starting document { .activity}
+# Classwork: Our First Webpage { .activity}
+
+## Text Editor
+
+A text editor is a program that lets you write, edit and save simple files containing text.
+
+Text is just a fancy computer term for letters and words.
+
+All computers have text editors, such as Notepad in Windows.
+
+We're going to use `Notepad++` which is a bit better for writing HTML than basic Notepad, because it recognises HTML and uses colours that help you avoid mistakes.
+
+## File Extensions
+
+A file extension is what helps a computer understand what is within a file. It's called a file extension because it is the bit after the file name, i.e. extending the name of a file after the bit us humans are interested in.
+
+We separate the file name from the extension with a dot (`.`).
+
+Some examples of file names with an extension are:
+
+- `homework.doc` - the file name is `homework` and the extension is `.doc` which is short for Document and tells the computer to open it in Microsoft Word or similar.
+- `hello.txt` - the file name is `hello` and the extension is `.txt` which means Text. It could be opened in Word, but the computer will usually just open it in the simplest program that will understand it, for example Notepad.
+- `homepage.html` - the file name is `homepage` and the extension is `.html` which you should recognise by now! The computer will open it in the program that makes most sense for a web page, which is a web browser. But you could ask it to open it in a text editor like `Notepad++` because you want to edit it, not look at it. You're a coder now!
+- `homepage.htm` - sometimes there's more than one extension for the same thing. Most computers treat `.htm` the same as `.html`. Once upon a time you were only allowed three letters for a file extension and this is what `.html` got shortened to. You can use whichever you prefer.
+
+Because all files really look the same to a computer - just lots of text - we use file extensions to hint what program we'd like to open things in. You can open _any_ file in Notepad if you like, but you might find it silly what you see!
 
 ## Activity Checklist { .check}
 
-1. Open a text editor. 
-2. Open the `about_me.html` file. It contains only a little bit of HTML code to get you started, but you will write the rest yourself.
+1. Open the `Notepad++` text editor. 
+2. Click the __Open__ icon in `Notepad++` and find the `about_me.html` file, then open it. It contains only a little bit of HTML code to get you started.
+3. Go to the `about_me.html` file and double-click it to open `Internet Explorer`, too. Each time you make a change in `Notepad++`, click save, then refresh `Internet Explorer` (by pressing F5 on the keyboard, or clicking the recycle icon in the address bar) to see your changes.
+4. Keep going until you're happy with your web page! Add pictures of your hobbies and interests using the tags you learned in Lesson 1 and the rules on directory structure you learned today.
 
-# Step 2: Make a page about yourself { .activity}
+## Mistakes
 
-### About mistakes
+Mistakes often happen. It's very easy to make them in HTML/coding because you have to spell everything perfectly. Even a single miss-press of the keyboard can cause the page to look totally different to what you expected! Recognising common mistakes will help you find and fix them quicker.
 
-Mistakes often happen. It's very easy to make them in HTML because you have to remember to close each tag, and the opening and closing tag are slightly different. Let's try making some mistakes to see how browser tries to make sense of our code even if we haven't written it perfectly.
+### Missing Closing Tags
+One of the most common mistakes is forgetting the __closing tag__, so let's remove the `</ul>` to see how it affects the page. Save the file and refresh it in the browser.
 
-## Activity Checklist { .check}
+What happened? Some things below the list moved a little bit to the right. Because we removed the closing tag the browser simply doesn't know the list of items has ended, so it treats everything like part of the list. That's why it all gets indented. Add the closing `</ul>` tag back in and save it. Now when you refresh the page the rest of tags aren't inside `<ul>` anymore.
 
-+ Let's pick the list of things we like as an example. One of the mistakes that happen often is forgetting the __closing tag__, so let's remove the `</ul>` to see how it affects the page. Save the file and refresh it in the browser.
-
-What happened? Some things below the list moved a little bit to the right. If you inspect the page with X-Ray Goggles you can see that things which followed the list now nest inside it, which is why they have moved to the right. After we removed the closing tag the browser simply doesn't know the list of items has ended.
-
-Add the closing `</ul>` tag back in and save it. Now when you refresh the page the rest of tags aren't inside `<ul>` anymore.
-
-+ Tags need to be spelt correctly for browser to understand them. What would happen if we misspelt something? 
+### Tag Spelling
+Tags need to be spelled correctly for the browser to understand them. What would happen if we misspelled something? 
 
 Find the `<h1>` tag. Let's change it to `<d1>`. Save the document and refresh it in the browser. 
 
-What happened? Since the browser doesn't know what you mean by this tag it can no longer tell that it's a heading and so it doesn't use a larger text to show how important this piece of text is. 
+What happened? Since the browser doesn't know what you mean by this tag it can no longer tell that it's a heading and so it doesn't use a larger text to show how important this piece of text is.
 
-Change `<d1>` back to `<h1>` and save again.
-
-+ Find one of the `<img>` tags. We've just tried misspelling the tag name and the browser wasn't sure what to do with it. But what if we misspell the attribute?
+### Missing Quotes
+Find one of the `<img>` tags. We've just tried misspelling the tag name and the browser wasn't sure what to do with it. But what if we misspell the attribute?
 
 Inside `<img>` tag we have the `href` and `alt` attributes:
 
-```HTML
-<img href="kitten.jpg" alt="This is a kitten." />
-```
-
-Try changing `href` to something else. Save the document and refresh in the browser.
-
-Oh no! The kitten is gone!
-
-Suddenly, the browser no longer knows where to look for the picture to display - it is looking for the file name inside the `href` attribute, which is no longer there.
-
-Change it back to `href` so we can keep looking at the kitten.
-
-+ Now remove the second quote (`"`) from `alt` attribute of this image: the one after the text, so you end up with this:
+Remove the second quote (`"`) from `alt` attribute of this image: the one after the text, so you end up with this:
 
 ```HTML
 <img href="kitten.jpg" alt="This is a kitten. />
 ```
 
-Save it and refresh in the browser. 
+Save it and refresh in the browser.
 
-The next tag disappeared. Why? The browser will think that everything after `alt="` and before the next quote (`"`) is the additional text for this image, including the end of the image tag and the next opening tag. 
+The next tag disappeared. Why? The browser will think that everything after `alt="` and before the next quote (`"`) is the additional text for this image, including the end of the image tag and the next opening tag.
 
-Fix it again by adding a quote after the `alt` text.
+We've made some common mistakes together, and seen that even a tiny error can make the browser struggle to understand what we mean. But most of the time it will try to show us something anyway, so when we've changed the header tag to something else it didn't understand this piece of text was a heading, but it still showed us the text. Smarter text editors like `Notepad++` are best to use, as they will highlight the HTML to show you text between quotes are special.
 
-We've made some common mistakes together, and sometimes a simple error might make the browser struggle to understand what we mean. But most of the time it will try to show us something anyway, so when we've changed the header tag to something else it didn't understand this piece of text was a heading, but it still showed us the text. So it's a little bit understanding, but some mistakes can make it very confused.
+## Extension Activity Checklist { .check}
 
-# Step 3: Create another page and link to it { .activity}
++ Open up developer tools to play around with the HTML on your web page. Just right-click anywhere and click `Inspect element`.
++ Move your mouse over different pieces of code. The part of the page that the code represents will light up, so you can see what code does what.
++ Pick a favourite website of yours to go and inspect with developer tools. See what you can change on these websites!
 
-Let's create another page. Open `about_me_page_2.html`. It has a little bit less code than the last page you were working with, but I'm sure you can figure out how to add new tags by now.
+# Next Week Preview: Adding and Linking Content { .activity}
 
-__Some hints and ideas:__
+In order to make your web pages more exciting you will want to link to other pages and add content such as images. You have to think about file and folder structure in order to understand how this works. In the provided folder we have two files and one folder inside.
 
-* Add a heading that will serve as the title of this page.
-* You could make this page about your pet, your favourite hobby or your friends and their hobbies.
-* Add a list of things your pet likes, if your page is about the pet.
+This is called a directory tree:
 
-__Are you done? Great! Let's now link the two pages you have created together.__
-
-When we've been linking to parts of the same page, we could just point links to a specific id within a page, like this:
-	
-```HTML
-<a href="#kitten">Click to see a kitten</a>
+```
+.
+├── about_me.html
+├── about_me_page_2.html
+└── images
+    ├── bunny.png
+    ├── cat.png
+    ├── dog.jpg
+    ├── goldfish.png
+    ├── hamster.png
+    ├── kitten.jpeg
+    ├── parrot.png
+    ├── spacecat.jpg
+    └── tortoise.png
 ```
 
-Which then took you to something like this:
+When we are making links in the `about_me.html` file, we can refer to `about_me_page_2.html` directly because it's at the same _level_ in the tree.
+
+But our pictures are inside another folder, deeper within the tree. We have to tell the browser this by naming the folder and using a forward slash (`/`). So a link to the image from `about_me.html` needs to look like this:
 
 ```HTML
-<div id="kitten">
-	<img src="kitten.jpg" alt="This is a kitten." />
-</div>
+<img src="images/bunny.png" />
 ```
 
-To link to another page, we don't need to include the hash symbol (`#`), but instead we need to say which file we would like the link to take us to.
+Now the browser knows to go from the `about_me.html` page level, into `images` and then pick up the `bunny.png` file to display. Aww!
 
-So to link from `about_me_page_2.html` to `about_me.html` write it like this:
-
-```HTML
-<a href="about_me.html">Go to About Me page</a>
-```
-
-You can change the link text to something else, like the page title if you have changed it.
-
-To link back from `about_me.html` to `about_me_page_2.html` you would have to write it like so:
-
-```HTML
-<a href="about_me_page_2.html">Go to my second page</a>
-```
-
-Congratulations! You have made your own website.
-
-# Putting your website on the web (extra activity) { .activity}
-
-Now you have made your own site, you want to show it off, am I right? 
-
-If you simply copied the address of the web page from your browser and then sent it to someone, they wouldn't see it. That's because this address describes a place on your computer, and your friends don't have access to it. Even of they did, what if they wanted to look at it when your computer wasn't turned on? 
-
-Remember servers from the first session? Servers are computers that are always on and connected to the internet, and they are set up so people can visit websites that live on those computers.
-
-To do that we will use __Cyberduck__ - it's a program for moving files from your computer to a server.
-
-1. Click `Open Connection`.
-2. Add the server name, user name and password as instructed by the CodeClub volunteer.
-3. Click `Connect`. You will then see all the folders and files on the server - most likely the server will be empty, as you haven't added your files yet.
-4. Drag your website files from your computer into your server window. The uploading will begin.
-5. Once uploaded, you can visit your website at the address given to you by the CodeClub volunteer.
-
-
-## Things to try { .try}
-
-* How could you link to another page on the web? (Hint: try adding `http://` and then the address of the site you want to link to)
-* Similar to suggestion above, how would you add a picture from somewhere on the web instead of from your computer? (Hint: again, try adding `http://` and the address of the picture)
-
-
-
-
+You can use this knowledge to create and link together lots of pages. We'll go through this in detail next lesson.
